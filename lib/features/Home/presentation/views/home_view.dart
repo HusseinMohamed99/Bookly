@@ -1,3 +1,4 @@
+import 'package:bookly/features/Home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -10,12 +11,7 @@ class HomeView extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: const Text('HomeView'),
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: const HomeViewBody(),
     );
   }
 }

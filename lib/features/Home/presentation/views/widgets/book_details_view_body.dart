@@ -1,95 +1,48 @@
+import 'package:bookly/core/utils/image_assets.dart';
+import 'package:bookly/core/utils/value_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        Expanded(
-          child: ListView(
-            children: const [
-              SizedBox(height: 20),
-              Text(
-                'Book Title',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Book Description',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Book Author',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Book Publisher',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Book Publish Date',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Book Pages',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Book Language',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Book ISBN 10',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Book ISBN 13',
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(height: 20),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(20),
-          child: SizedBox(
-            width: double.infinity,
-            height: 50,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text('Add to favorites'),
-            ),
-          ),
-        ),
+        CustomBookDetailsAppBar(),
       ],
+    );
+  }
+}
+
+class CustomBookDetailsAppBar extends StatelessWidget {
+  const CustomBookDetailsAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        right: AppPadding.p30,
+        left: AppPadding.p30,
+        bottom: AppPadding.p30,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
+            icon: const Icon(Icons.close),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(Assets.imagesCart),
+          ),
+        ],
+      ),
     );
   }
 }

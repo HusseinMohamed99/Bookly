@@ -15,12 +15,12 @@ class CustomAppBar extends StatelessWidget {
         bottom: AppPadding.p30,
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SvgPicture.asset(Assets.imagesLogo),
-          const Spacer(),
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset(Assets.imagesIcSearch),
+            icon: SvgPicture.asset(Assets.imagesSearch),
           ),
         ],
       ),

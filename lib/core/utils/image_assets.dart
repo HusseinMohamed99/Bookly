@@ -9,17 +9,9 @@ class Assets {
   /// assets/images/Books.svg
   static const String imagesBooks = "assets/images/Books.svg";
 
-  /// Assets for imagesIcCart
-  /// assets/images/icCart.svg
-  static const String imagesIcCart = "assets/images/icCart.svg";
-
-  /// Assets for imagesIcDose
-  /// assets/images/icDose.svg
-  static const String imagesIcDose = "assets/images/icDose.svg";
-
-  /// Assets for imagesIcSearch
-  /// assets/images/icSearch.svg
-  static const String imagesIcSearch = "assets/images/icSearch.svg";
+  /// Assets for imagesCart
+  /// assets/images/Cart.svg
+  static const String imagesCart = "assets/images/Cart.svg";
 
   /// Assets for imagesLogo
   /// assets/images/Logo.svg
@@ -32,6 +24,10 @@ class Assets {
   /// Assets for imagesSaved
   /// assets/images/Saved.svg
   static const String imagesSaved = "assets/images/Saved.svg";
+
+  /// Assets for imagesSearch
+  /// assets/images/Search.svg
+  static const String imagesSearch = "assets/images/Search.svg";
 
   /// Assets for imagesStar
   /// assets/images/Star.svg

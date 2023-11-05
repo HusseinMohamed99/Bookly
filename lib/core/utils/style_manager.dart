@@ -13,10 +13,11 @@ class StyleManager {
         fontWeight: fontWeight ?? FontWeightManager.medium,
         fontFamily: FontConstant.fontFamily,
       );
-  static textStyle18({FontWeight? fontWeight}) => TextStyle(
+  static textStyle18({Color? color, FontWeight? fontWeight}) => TextStyle(
         fontSize: FontSize.s18,
         fontWeight: fontWeight ?? FontWeightManager.semiBold,
         fontFamily: FontConstant.fontFamily,
+        color: color,
       );
   static textStyle20({String? fontFamily, FontWeight? fontWeight}) => TextStyle(
         fontSize: FontSize.s20,

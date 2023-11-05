@@ -32,7 +32,10 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: assets/fonts/Montserrat-Regular.ttf
-        
+
+    - family: Sectra
+      fonts:
+        - asset: assets/fonts/GT Sectra Fine Regular.ttf
 flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/utils

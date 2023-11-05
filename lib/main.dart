@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: AppString.appName,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: ColorManager.scaffoldBackgroundColor,
+        useMaterial3: true,
       ),
       home: const SplashView(),
     );

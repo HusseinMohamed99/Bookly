@@ -1,4 +1,3 @@
-import 'package:bookly/core/utils/color_manager.dart';
 import 'package:bookly/core/utils/image_assets.dart';
 import 'package:bookly/core/utils/style_manager.dart';
 import 'package:bookly/core/utils/value_manager.dart';
@@ -22,10 +21,11 @@ class BookRating extends StatelessWidget {
             style: StyleManager.textStyle16(),
           ),
         ),
-        Text(
-          '(2390)',
-          style: StyleManager.textStyle14(
-            color: ColorManager.greyColor,
+        Opacity(
+          opacity: 0.5,
+          child: Text(
+            '(2390)',
+            style: StyleManager.textStyle14(),
           ),
         ),
       ],

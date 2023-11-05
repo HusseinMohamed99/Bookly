@@ -32,4 +32,8 @@ class Assets {
   /// Assets for imagesSaved
   /// assets/images/Saved.svg
   static const String imagesSaved = "assets/images/Saved.svg";
+
+  /// Assets for imagesStar
+  /// assets/images/Star.svg
+  static const String imagesStar = "assets/images/Star.svg";
 }

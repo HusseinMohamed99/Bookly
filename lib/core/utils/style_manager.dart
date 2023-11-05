@@ -2,10 +2,11 @@ import 'package:bookly/core/utils/font_manager.dart';
 import 'package:flutter/material.dart';
 
 class StyleManager {
-  static textStyle14({FontWeight? fontWeight}) => TextStyle(
+  static textStyle14({Color? color, FontWeight? fontWeight}) => TextStyle(
         fontSize: FontSize.s14,
         fontWeight: fontWeight ?? FontWeightManager.regular,
         fontFamily: FontConstant.fontFamily,
+        color: color,
       );
   static textStyle16({FontWeight? fontWeight}) => TextStyle(
         fontSize: FontSize.s16,

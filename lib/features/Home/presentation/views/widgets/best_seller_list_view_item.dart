@@ -1,4 +1,3 @@
-import 'package:bookly/core/utils/color_manager.dart';
 import 'package:bookly/core/utils/font_manager.dart';
 import 'package:bookly/core/utils/style_manager.dart';
 import 'package:bookly/core/utils/value_manager.dart';
@@ -52,11 +51,13 @@ class BestSellerListViewItem extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 3),
-                Text(
-                  'J.K. Rowling',
-                  style: StyleManager.textStyle14(
-                    fontWeight: FontWeightManager.medium,
-                    color: ColorManager.greyColor,
+                Opacity(
+                  opacity: 0.7,
+                  child: Text(
+                    'J.K. Rowling',
+                    style: StyleManager.textStyle14(
+                      fontWeight: FontWeightManager.medium,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 3),

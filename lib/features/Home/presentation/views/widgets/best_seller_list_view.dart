@@ -16,7 +16,7 @@ class BestSellerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
+        (context, index) {
           return Padding(
             padding: const EdgeInsets.only(
               left: AppPadding.p30,

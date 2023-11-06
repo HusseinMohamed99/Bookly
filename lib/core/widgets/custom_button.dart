@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/style_manager.dart';
+import 'package:bookly/core/utils/value_manager.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -16,7 +17,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 48,
+      height: AppSize.s48,
       child: TextButton(
         onPressed: () {},
         style: TextButton.styleFrom(

@@ -1,5 +1,6 @@
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:bookly/core/utils/image_assets.dart';
+import 'package:bookly/core/utils/value_manager.dart';
 import 'package:bookly/features/Splash/presentation/views/widgets/animated_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -42,7 +43,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
           Assets.imagesLogo,
           width: screenWidth * .8,
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: AppSize.s20),
         AnimatedText(slidingAnimation: slidingAnimation)
       ],
     );

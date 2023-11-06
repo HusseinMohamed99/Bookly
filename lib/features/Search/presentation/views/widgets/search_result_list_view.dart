@@ -2,8 +2,8 @@ import 'package:bookly/core/utils/value_manager.dart';
 import 'package:bookly/features/Home/presentation/views/widgets/books_list_view_item.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({
+class SearchResultListView extends StatelessWidget {
+  const SearchResultListView({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
@@ -11,7 +11,6 @@ class BestSellerListView extends StatelessWidget {
 
   final double screenWidth;
   final double screenHeight;
-
   @override
   Widget build(BuildContext context) {
     return SliverList(
@@ -19,8 +18,6 @@ class BestSellerListView extends StatelessWidget {
         (context, index) {
           return Padding(
             padding: const EdgeInsets.only(
-              left: AppPadding.p30,
-              right: AppPadding.p48,
               bottom: AppPadding.p20,
             ),
             child: BooksListViewItem(

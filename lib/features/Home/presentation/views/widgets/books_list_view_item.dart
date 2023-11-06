@@ -6,8 +6,8 @@ import 'package:bookly/features/Home/presentation/views/widgets/book_rating.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({
+class BooksListViewItem extends StatelessWidget {
+  const BooksListViewItem({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
@@ -41,13 +41,13 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              width: 30,
+              width: AppSize.s30,
             ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 5),
+                  const SizedBox(height: AppSize.s5),
                   Text(
                     'Harry Potter and the Goblet of Fire',
                     maxLines: 2,
@@ -56,7 +56,7 @@ class BestSellerListViewItem extends StatelessWidget {
                       fontFamily: FontConstant.sectraFamily,
                     ),
                   ),
-                  const SizedBox(height: 3),
+                  const SizedBox(height: AppSize.s3),
                   Opacity(
                     opacity: 0.7,
                     child: Text(
@@ -66,14 +66,15 @@ class BestSellerListViewItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 3),
+                  const SizedBox(height: AppSize.s3),
                   Expanded(
                     child: Row(
                       children: [
                         Text(
                           '19.99 €',
                           style: StyleManager.textStyle20(
-                              fontWeight: FontWeightManager.bold),
+                            fontWeight: FontWeightManager.bold,
+                          ),
                         ),
                         const Spacer(),
                         const BookRating(),

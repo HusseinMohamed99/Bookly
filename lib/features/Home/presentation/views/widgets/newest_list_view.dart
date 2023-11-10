@@ -2,8 +2,8 @@ import 'package:bookly/core/utils/value_manager.dart';
 import 'package:bookly/features/Home/presentation/views/widgets/books_list_view_item.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({
+class NewestListView extends StatelessWidget {
+  const NewestListView({
     super.key,
     required this.screenWidth,
     required this.screenHeight,

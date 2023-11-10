@@ -1,7 +1,7 @@
-import 'package:bookly/features/Home/presentation/views/widgets/best_seller_list_view.dart';
-import 'package:bookly/features/Home/presentation/views/widgets/best_seller_widget.dart';
 import 'package:bookly/features/Home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly/features/Home/presentation/views/widgets/featured_book_list_view.dart';
+import 'package:bookly/features/Home/presentation/views/widgets/newest_list_view.dart';
+import 'package:bookly/features/Home/presentation/views/widgets/newest_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -20,11 +20,11 @@ class HomeViewBody extends StatelessWidget {
             children: [
               const CustomAppBar(),
               FeaturedBooksListView(screenHeight: screenHeight),
-              const BestSellerText(),
+              const NewestText(),
             ],
           ),
         ),
-        BestSellerListView(
+        NewestListView(
           screenWidth: screenWidth,
           screenHeight: screenHeight,
         ),

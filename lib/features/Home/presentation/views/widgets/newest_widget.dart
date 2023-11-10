@@ -1,9 +1,10 @@
+import 'package:bookly/core/utils/app_string.dart';
 import 'package:bookly/core/utils/style_manager.dart';
 import 'package:bookly/core/utils/value_manager.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerText extends StatelessWidget {
-  const BestSellerText({
+class NewestText extends StatelessWidget {
+  const NewestText({
     super.key,
   });
 
@@ -16,7 +17,7 @@ class BestSellerText extends StatelessWidget {
         bottom: AppPadding.p20,
       ),
       child: Text(
-        'Best Seller',
+        AppString.newest,
         style: StyleManager.textStyle18(),
       ),
     );

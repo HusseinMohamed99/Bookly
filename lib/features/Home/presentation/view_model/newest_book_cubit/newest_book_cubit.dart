@@ -6,4 +6,16 @@ class NewestBookCubit extends Cubit<NewestBookState> {
   NewestBookCubit(this.homeRepo) : super(NewestBookInitial());
   static NewestBookCubit get(context) => BlocProvider.of(context);
   HomeRepo homeRepo;
+  Future<void> getNewestBooks() async {
+    emit(NewestBookLoading());
+    var result = await homeRepo.getNewestBooks();
+    result.fold(
+      (failure) {
+        emit(NewestBookFailure(failure.message));
+      },
+      (books) {
+        emit(NewestBookSuccess(books));
+      },
+    );
+  }
 }

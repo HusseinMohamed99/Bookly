@@ -16,7 +16,6 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
       },
       (books) {
         emit(FeaturedBooksLoaded(books));
-        print(books);
       },
     );
   }

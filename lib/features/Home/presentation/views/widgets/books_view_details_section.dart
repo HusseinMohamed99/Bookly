@@ -18,7 +18,10 @@ class BooksViewDetailsSection extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: screenWidth * .17),
-            child: const CustomBookImage(),
+            child: const CustomBookImage(
+              imageUrl:
+                  'https://resizing.flixster.com/_5YUtL7vO7PzpnQ8uYYb40Hsa1k=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/NowShowing/130620/130620_ab.jpg',
+            ),
           ),
           const SizedBox(height: AppSize.s43),
           Text(

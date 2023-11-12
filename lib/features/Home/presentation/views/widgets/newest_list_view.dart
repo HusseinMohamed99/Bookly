@@ -43,11 +43,13 @@ class NewestListView extends StatelessWidget {
             ),
           );
         } else if (state is NewestBookFailure) {
-          return SliverToBoxAdapter(
+          return SliverFillRemaining(
+            hasScrollBody: false,
             child: CustomErrorWidget(errorMessage: state.message),
           );
         } else {
-          return const SliverToBoxAdapter(
+          return const SliverFillRemaining(
+            hasScrollBody: false,
             child: AdaptiveIndicator(),
           );
         }

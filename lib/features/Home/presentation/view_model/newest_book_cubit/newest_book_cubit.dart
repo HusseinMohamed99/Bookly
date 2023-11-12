@@ -5,7 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class NewestBookCubit extends Cubit<NewestBookState> {
   NewestBookCubit(this.homeRepo) : super(NewestBookInitial());
   static NewestBookCubit get(context) => BlocProvider.of(context);
-  HomeRepo homeRepo;
+  final HomeRepo homeRepo;
+
   Future<void> getNewestBooks() async {
     emit(NewestBookLoading());
     var result = await homeRepo.getNewestBooks();

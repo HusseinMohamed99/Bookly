@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
               ..getFeaturedBooks(),
           ),
           BlocProvider(
-            create: (context) => NewestBookCubit(getIt.get<HomeRepoImpl>()),
+            create: (context) => NewestBookCubit(getIt.get<HomeRepoImpl>()..getNewestBooks(),),
           ),
         ],
         child: MaterialApp.router(
@@ -40,6 +40,6 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: ColorManager.scaffoldBackgroundColor,
             useMaterial3: true,
           ),
-        ));
+        ),);
   }
 }

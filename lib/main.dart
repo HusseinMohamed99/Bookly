@@ -23,23 +23,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>())
-              ..getFeaturedBooks(),
+      providers: [
+        BlocProvider(
+          create: (context) =>
+              FeaturedBooksCubit(getIt.get<HomeRepoImpl>())..getFeaturedBooks(),
+        ),
+        BlocProvider(
+          create: (context) => NewestBookCubit(
+            getIt.get<HomeRepoImpl>()..getNewestBooks(),
           ),
-          BlocProvider(
-            create: (context) => NewestBookCubit(getIt.get<HomeRepoImpl>()..getNewestBooks(),),
-          ),
-        ],
-        child: MaterialApp.router(
-          routerConfig: AppRouter.router,
-          debugShowCheckedModeBanner: false,
-          title: AppString.appName,
-          theme: ThemeData.dark().copyWith(
-            scaffoldBackgroundColor: ColorManager.scaffoldBackgroundColor,
-            useMaterial3: true,
-          ),
-        ),);
+        ),
+      ],
+      child: MaterialApp.router(
+        routerConfig: AppRouter.router,
+        debugShowCheckedModeBanner: false,
+        title: AppString.appName,
+        theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: ColorManager.scaffoldBackgroundColor,
+          useMaterial3: true,
+        ),
+      ),
+    );
   }
 }

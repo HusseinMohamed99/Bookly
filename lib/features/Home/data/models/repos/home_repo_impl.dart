@@ -16,11 +16,16 @@ class HomeRepoImpl implements HomeRepo {
               'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:programming');
       List<BookModel> books = [];
       for (var book in data['items']) {
-        books.add(
-          BookModel.fromJson(book),
-        );
+        try {
+          books.add(
+            BookModel.fromJson(book),
+          );
+        } catch (e) {
+          books.add(
+            BookModel.fromJson(book),
+          );
+        }
       }
-
       return right(books);
     } catch (e) {
       if (e is DioException) {
@@ -41,9 +46,15 @@ class HomeRepoImpl implements HomeRepo {
           endPoint: 'volumes?Filtering=free-ebooks&q=programming');
       List<BookModel> books = [];
       for (var book in data['items']) {
-        books.add(
-          BookModel.fromJson(book),
-        );
+        try {
+          books.add(
+            BookModel.fromJson(book),
+          );
+        } catch (e) {
+          books.add(
+            BookModel.fromJson(book),
+          );
+        }
       }
       return right(books);
     } catch (e) {

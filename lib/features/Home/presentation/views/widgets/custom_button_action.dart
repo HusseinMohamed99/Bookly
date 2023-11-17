@@ -18,7 +18,7 @@ class CustomButtonAction extends StatelessWidget {
         children: [
           Expanded(
             child: CustomButton(
-              text: '19.99€',
+              text: 'Free',
               backgroundColor: ColorManager.whiteColor,
               textColor: ColorManager.blackColor,
               borderRadius: BorderRadius.only(

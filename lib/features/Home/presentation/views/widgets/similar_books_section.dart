@@ -6,8 +6,10 @@ import 'package:bookly/features/Home/presentation/views/widgets/similar_book_lis
 import 'package:flutter/material.dart';
 
 class SimilarBooksSection extends StatelessWidget {
-  const SimilarBooksSection({super.key, required this.screenHeight});
+  const SimilarBooksSection(
+      {super.key, required this.screenHeight, required this.imageUrl});
   final double screenHeight;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {

@@ -23,7 +23,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     super.initState();
     initSlidingAnimation();
 
-    navigateToHomeView();
+    // navigateToHomeView();
   }
 
   @override
@@ -40,7 +40,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SvgPicture.asset(
-          Assets.imagesLogo,
+          Assets.imagesLogo2,
           width: screenWidth * .8,
         ),
         const SizedBox(height: AppSize.s20),

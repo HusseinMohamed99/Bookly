@@ -49,7 +49,7 @@ class BooksViewDetailsSection extends StatelessWidget {
           ),
           const SizedBox(height: AppSize.s37),
           CustomButtonAction(
-            previewLink: bookModel.volumeInfo.previewLink ?? '',
+            bookModel: bookModel,
           ),
         ],
       ),

@@ -5,4 +5,5 @@ class AppString {
   static const String preview = "Preview";
   static const String alsoLike = "You can also like";
   static const String notLaunch = "Could not launch";
+  static const String notAvailable = "not Available";
 }
